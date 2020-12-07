@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "name": "Mạnh",
+      "phone": "0789307845",
+      "email": "nddmanh@ilec",
+      "password": "75f0817da202dfff6c1e8bf6ec5fad8f",
+      "id": "bqW4879OZ"
+    },
+    {
+      "name": "Nguyễn Đức Mạnh",
+      "phone": "111",
+      "email": "knowledge20dm@gmail.com",
+      "password": "81dc9bdb52d04dc20036dbd8313ed055",
+      "id": "igt9N6Ycx",
+      "money": 760000
+    },
+    {
+      "name": "Nam",
+      "email": "a@b",
+      "phone": "111",
+      "password": "81dc9bdb52d04dc20036dbd8313ed055",
+      "id": "xP2VnmojT",
+      "money": 13000
+    }
+  ]
+}

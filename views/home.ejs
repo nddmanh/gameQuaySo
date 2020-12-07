@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %> 
+    </title>
+    <link href="/stylesheets/home.css" rel="stylesheet">
+
+</head>
+<body>
+    <div id="main">
+
+            <header>
+                <div class="nutLogo" id="logo">
+                    <img style="cursor: pointer;" src="/images/logo.png" alt="">
+
+                </div>
+                <div class="menu">
+                    <ul>
+                            <li><button><a style="color: rgb(51, 51, 51);" href="/"><b>Home </b></a></button>  </li>
+                            <li class="nut"> About</li>
+                            <li><a href="https://www.facebook.com/nddmanh/">Contact</a> </li>
+                            <li>
+                        <% if(!user) {%> 
+                            <a href="../auth/login">Sign In</a> 
+                        <% } else { %> 
+                            
+                                <span>Xin chào <b style="color: rgb(247, 247, 100);"><%= user.name %> </b> </span>
+                            
+                            
+                        <% } %> 
+                            </li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="box1"></div>
+
+            <div id="box2">
+                <div id="text">
+                    Tích Cực Quay Tay <br>Vận May Sẽ Đến
+                    <div class="content">
+                        
+                        <div class="btn-group">
+                            <a href="/game" class="color1">Chơi Ngay</a>
+                        </div>
+                    </div>  
+                </div>
+                
+            </div>
+
+            <div class="box3" >
+                <div class="content1">
+                    <h1 class="head">Tích Cực Quay Tay <br> Vận May Sẽ Đến </h1>
+                    <h3> Giới Thiệu</h3>
+                    <p>Được phát triển dựa trên 1 trò chơi dân gian của ông cha ta được gọi tên là <b>Soi Cầu</b></p>
+                    <p>Đây là tựa game bạn có thể kiếm tiền bằng cách thử độ may mắn của mình </p>
+                    <p>Khi tạo tài khoản, bạn được tặng ngay <b>10 000$</b> </p>
+                    <h3>Luật chơi</h3>
+                    <h4> Có 2 kiểu chơi để bạn tham gia như sau:</h4>
+                    <p><b><a class="game" href="/game/biggame">Chơi lớn: </a> </b> Bạn đặt cược 1 con số từ 0 đến 99, sau đó nhập số tiền bạn muốn cược ( không được lớn hơn số tiền bạn có) sau đó nhấn nút quay. <br> Nếu con số may mắn quay ra đúng với con số bạn cược, bạn sẽ nhận được x70 lần số tiền cược</p>
+                    <p><b><a class="game" href="/game">Chơi nhỏ: </a> </b> Bạn đặt cược 1 con số từ 1 đến 5, sau đó nhập số tiền bạn muốn cược ( không được lớn hơn số tiền bạn có) sau đó nhấn nút quay. <br> Nếu con số may mắn quay ra đúng với con số bạn cược, bạn sẽ nhận được x3 lần số tiền cược</p>
+                    <h3>Cách nạp tiền</h3>
+                    <p>Khi hết tiền, bạn có thể nạp tiền bằng cách chuyển khoản vào số tài khoản: <b>3406200009532</b> với quy đổi <b>1$ = 25 000vnđ</b></p>
+                    <h3>Cách rút tiền</h3>
+                    <p>Khi bạn muốn rửa tay gác kiếm, quay đầu là bờ, thì bạn có thể rút tiền từ tài khoản bằng cách liên hệ với mình qua phần <b>Contact</b> <br> với quy đổi <b>1$ = 10 000vnđ</b> </p>
+                    <p><b>Lưu ý: </b>Bạn có thể rút tiền khi tài khoản lớn hơn <b>100 000 $</b> </p>
+                </div>
+                
+            </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+    
+    var nut = document.querySelector('.nut'),
+        nutLogo = document.querySelector('.nutLogo'),
+        box3 = document.querySelector('.box3');
+
+    // khi click vao nut 
+    nut.onclick = function(){
+        box3.classList.toggle('about');
+
+    }
+    nutLogo.onclick = function(){
+        box3.classList.toggle('about');
+
+    }
+
+}, false)
+
+</script>
+        
+
+    </div>
+</body>
+</html>

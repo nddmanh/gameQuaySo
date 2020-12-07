@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: #c0392b;
+    background-size: cover;
+}
+.mainbox {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin-top: 50px;
+}
+/*  */
+.mainbox.animate:after {
+    animation: animateArrow 0.7s ease infinite;
+}
+@keyframes animateArrow {
+    50%{
+        right: -40px;
+    }
+}
+.box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    overflow: hidden;
+    transition: all ease 5s;
+}
+
+span {
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    position: absolute;
+}
+
+.span1 {
+    clip-path: polygon(0 92%, 100% 50%, 0% 8%);
+    background-color: #ffeb3b;
+    top: 120px;
+    left: 0;
+}
+.span2 {
+    clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+    background-color: #ff833b;
+    top: 120px;
+    right: 0;
+}
+.span3 {
+    clip-path: polygon( 50% 0, 8% 100%, 92% 100%);
+    background-color: #3bff9d;
+    bottom: 0;
+    left: 120px;
+}
+.span4 {
+    clip-path: polygon(50% 100%, 92% 0%, 8% 0);
+    background-color: #3b79ff;
+    top: 0;
+    left: 120px;
+}
+.box2 {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-135deg);
+}
+
+.spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    background-color: #ff5722;
+    color: #fff;
+    box-shadow: 0 5px 20px #000;
+    font-weight: bold;
+    font-size: 22px;
+    cursor: pointer;
+}
+.spin:active{
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 80px;
+    background: linear-gradient(to top, transparent, rgba(0,0,0,0.6));
+    
+}
+
+#logo {
+    float: left;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+#logo img {
+    width: 50px;
+}
+
+header .menu {
+  float: right;
+  margin-top: 5px;  
+  font-family: 'Bahnschrift Condensed';
+  margin-right: 150px;
+}
+header ul li {
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    margin: 25px 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+header ul li a {
+    text-decoration: none;
+    
+}
+span.hello {
+    padding: 5px 25px;
+    font-weight: 1000;
+    line-height: 20px;
+    font-family: 'Bahnschrift Condensed';
+    color: #fff;
+
+}
+.content {
+    padding: 15px;
+    font-weight: 50px;
+    line-height: 20px;
+    font-family: 'Bahnschrift Condensed';
+    color: #fff;
+    font-size: 30px;
+    margin-right: 100px;
+    margin-top: 50px;
+
+}
+
+.text1{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 4px 0;
+    margin: 2px 0;
+    border-bottom: 1px solid #fff;
+  }
+.text1 input{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin: 0 5px;
+  }
+.input {
+    padding: 10px;
+}
+
+.box3 {
+    position: fixed;
+    margin-left:-5% ;
+    margin-top: 300px;
+    width: 700px;
+    height: 500 px;
+    background: #2980b9;
+    text-align: center;
+    font-family: 'Bahnschrift Condensed';
+    border: 5px solid rgb(218, 218, 218);
+    border-radius: 30px;
+    opacity: 0;
+    transition: 0.4s;
+    margin-bottom: 100px;
+    visibility: hidden;
+    z-index: 2;
+  }
+  
+.content1{
+    padding: 20px;
+    color: rgb(236, 236, 236);
+}
+
+h1.head {
+    font-size: 50px;
+    font-weight: 10000;
+    color: #f1c40f;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #f1c40f;
+}
+
+.about {
+    transform: translateY(-70px);
+    opacity: 1;
+    visibility: visible;
+}
+.nut{
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    margin: 0 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+p, h3 {padding: 10px;}
+  
