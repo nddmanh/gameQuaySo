@@ -5,6 +5,8 @@ var controller = require('../controllers/auth.controller');
 
 var auth = express.Router();
 
+auth.get('/logout', controller.logout);
+
 auth.get('/login', controller.login);
 
 auth.post('/login', controller.postLogin);

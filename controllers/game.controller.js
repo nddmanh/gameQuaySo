@@ -27,7 +27,20 @@ module.exports.postGame =function(req,res) {
         .assign({ money: money1})
         .write();
     console.log(random);
-    res.redirect('/game' );
+
+    if( soCuoc == random) {
+        setTimeout(function(){
+            res.redirect('/game');
+
+        }, 3000);
+    }
+
+    else {
+        setTimeout(function(){
+            res.redirect('/game');
+
+        }, 3000);
+    }
     
 };
 
@@ -57,6 +70,35 @@ module.exports.postBigGame =function(req,res) {
         .write();
 
     console.log(random);
-    res.redirect('/game/biggame' );
     
+    setTimeout(function(){
+        res.redirect('/game/biggame' );
+    }, 3000);
+
+    
+};
+
+
+module.exports.leaderboard = function(req, res) {
+    var user = db.get('users').value();
+
+    function GetSortOrder(prop) {    
+        return function(a, b) {    
+            if (a[prop] < b[prop]) {    
+                return 1;    
+            } else if (a[prop] > b[prop]) {    
+                return -1;    
+            }    
+            return 0;    
+        }    
+    }    
+       
+    user.sort(GetSortOrder("money"));
+    console.log(user);
+
+    res.render('game/leaderboard', {
+        title: "Bảng xếp hạng",
+        user:user,
+        i: 1
+    });
 };

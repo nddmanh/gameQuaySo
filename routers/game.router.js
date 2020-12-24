@@ -12,6 +12,9 @@ game.post('/', controller.postGame);
 
 game.get('/biggame', authMiddleware.requireAuth, controller.BigGame);
 
+
 game.post('/biggame', controller.postBigGame);
+
+game.get('/leaderboard', controller.leaderboard);
 
 module.exports = game;

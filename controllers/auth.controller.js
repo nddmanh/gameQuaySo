@@ -3,6 +3,19 @@ var express = require('express');
 var md5 = require('md5');
 var db = require('../db');
 
+module.exports.logout = function(req, res) {
+
+    cookie = req.cookies;
+    for (var prop in cookie) {
+        if (!cookie.hasOwnProperty(prop)) {
+            continue;
+        }    
+        res.cookie(prop, '', {expires: new Date(0)});
+    }
+
+    res.redirect('/');
+};
+
 module.exports.login = function(req, res) {
     var user = db.get('users').find({ id: req.cookies.userId }).value();
     res.locals.user = user;
@@ -17,10 +30,10 @@ module.exports.login = function(req, res) {
 
 module.exports.postLogin = function(req, res) {
 
-    var email = req.body.email;
+    var username = req.body.username;
     var password = req.body.password;
 
-    var user = db.get('users').find({ email: email }).value();
+    var user = db.get('users').find({ username: username }).value();
 
     if(!user) {
         res.render('auth/login', {

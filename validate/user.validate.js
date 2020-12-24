@@ -7,11 +7,8 @@ module.exports.postCreate = function(req, res, next ){
     if (!req.body.name) {
         errors.push('Name is required.');
     }
-    if (!req.body.phone) {
-        errors.push('Phone is required.');
-    }
-    if (!req.body.email) {
-        errors.push('email is required.');
+    if (!req.body.username) {
+        errors.push('username is required.');
     }
     if (!req.body.password) {
         errors.push('password is required.');
