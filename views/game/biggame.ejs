@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <%= title %>
+        Chơi lớn
     </title>
     <link href="/stylesheets/biggame.css" rel="stylesheet">
 
 </head>
 <body>
+
+        <% var thongbao %> 
+        <% if ( thongbao ) {%> 
+            <script>
+                alert("<%= thongbao %>");
+            </script>
+        <% }%> 
+
     <header>
         <div id="logo">
             <img class="nut" src="/images/logo.png" alt="">

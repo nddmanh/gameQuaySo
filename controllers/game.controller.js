@@ -3,6 +3,9 @@ var express = require('express');
 var db = require('../db');
 
 module.exports.game = function(req, res) {
+    var user = db.get('users').find({ id: req.cookies.userId }).value();
+    res.locals.user = user  ;
+
     res.render('game/game', {title: "Chơi Nhỏ"});
 };
 
@@ -29,17 +32,35 @@ module.exports.postGame =function(req,res) {
     console.log(random);
 
     if( soCuoc == random) {
-        setTimeout(function(){
-            res.redirect('/game');
 
-        }, 3000);
+        setTimeout(function(){
+            var user = db.get('users').find({ id: req.cookies.userId }).value();
+            res.locals.user = user  ;
+
+            res.render('game/game', {
+                thongbao : [
+                    'Chúc mừng, bạn đã đoán trúng.'
+                ]
+            });
+
+        }, 4000);
+        return;
     }
 
+    
     else {
         setTimeout(function(){
-            res.redirect('/game');
+            var user = db.get('users').find({ id: req.cookies.userId }).value();
+            res.locals.user = user  ;
 
-        }, 3000);
+            res.render('game/game', {
+                thongbao : [
+                    'Chia buồn, bạn đã đoán sai.'
+                ]
+            });
+
+        }, 4000);
+        return;
     }
     
 };
@@ -70,12 +91,38 @@ module.exports.postBigGame =function(req,res) {
         .write();
 
     console.log(random);
-    
-    setTimeout(function(){
-        res.redirect('/game/biggame' );
-    }, 3000);
+
+    if( soCuoc == random) {
+
+        setTimeout(function(){
+            var user = db.get('users').find({ id: req.cookies.userId }).value();
+            res.locals.user = user  ;
+
+            res.render('game/biggame', {
+                thongbao : [
+                    'Chúc mừng, bạn đã đoán trúng.'
+                ]
+            });
+
+        }, 4000);
+        return;
+    }
 
     
+    else {
+        setTimeout(function(){
+            var user = db.get('users').find({ id: req.cookies.userId }).value();
+            res.locals.user = user  ;
+
+            res.render('game/biggame', {
+                thongbao : [
+                    'Chia buồn, bạn đã đoán sai.'
+                ]
+            });
+
+        }, 4000);
+        return;
+    }
 };
 
 
@@ -94,6 +141,7 @@ module.exports.leaderboard = function(req, res) {
     }    
        
     user.sort(GetSortOrder("money"));
+
     console.log(user);
 
     res.render('game/leaderboard', {

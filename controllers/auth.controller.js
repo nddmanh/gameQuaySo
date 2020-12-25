@@ -46,7 +46,6 @@ module.exports.postLogin = function(req, res) {
 
     var hashedPassword = md5(password);
 
-    console.log(hashedPassword);
     if(user.password !== hashedPassword) {
         res.render('auth/login', {
             errors: [
