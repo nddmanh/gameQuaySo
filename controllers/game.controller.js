@@ -29,7 +29,6 @@ module.exports.postGame =function(req,res) {
         .find({ id: req.cookies.userId })
         .assign({ money: money1})
         .write();
-    console.log(random);
 
     if( soCuoc == random) {
 
@@ -40,7 +39,8 @@ module.exports.postGame =function(req,res) {
             res.render('game/game', {
                 thongbao : [
                     'Chúc mừng, bạn đã đoán trúng.'
-                ]
+                ],
+                random : random
             });
 
         }, 4000);
@@ -56,7 +56,8 @@ module.exports.postGame =function(req,res) {
             res.render('game/game', {
                 thongbao : [
                     'Chia buồn, bạn đã đoán sai.'
-                ]
+                ],
+                random : random
             });
 
         }, 4000);
@@ -90,8 +91,6 @@ module.exports.postBigGame =function(req,res) {
         .assign({ money: money1})
         .write();
 
-    console.log(random);
-
     if( soCuoc == random) {
 
         setTimeout(function(){
@@ -101,7 +100,8 @@ module.exports.postBigGame =function(req,res) {
             res.render('game/biggame', {
                 thongbao : [
                     'Chúc mừng, bạn đã đoán trúng.'
-                ]
+                ],
+                random : random
             });
 
         }, 4000);
@@ -117,7 +117,8 @@ module.exports.postBigGame =function(req,res) {
             res.render('game/biggame', {
                 thongbao : [
                     'Chia buồn, bạn đã đoán sai.'
-                ]
+                ],
+                random : random
             });
 
         }, 4000);
@@ -142,11 +143,16 @@ module.exports.leaderboard = function(req, res) {
        
     user.sort(GetSortOrder("money"));
 
-    console.log(user);
-
     res.render('game/leaderboard', {
-        title: "Bảng xếp hạng",
-        user:user,
-        i: 1
+        title : "Bảng xếp hạng",
+        user : user,
+        i : 1
+    });
+};
+
+module.exports.about = function(req, res) {
+
+    res.render('game/about', {
+        title : "About"
     });
 };

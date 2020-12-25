@@ -17,4 +17,6 @@ game.post('/biggame', controller.postBigGame);
 
 game.get('/leaderboard', controller.leaderboard);
 
+game.get('/about', controller.about);
+
 module.exports = game;
