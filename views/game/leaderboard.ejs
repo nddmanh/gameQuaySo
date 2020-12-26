@@ -4,23 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bảng Xếp Hạng</title>
+    <link href="/stylesheets/leaderboard.css" rel="stylesheet">
 </head>
 <body>
-    <table style="border: 1px solid gray;">
-        <tr>
-            <th colspan="3">Bảng Xếp Hạng</th>
-        </tr>
-        <% user.forEach(user => { %>  
-        <tr>
-            <td><%= i++ %> </td>
-            <td><%= user.name %> </td>
-            <td><%= user.money %>$</td>
+    <div class="bg">
+        <!-- header -->
+        <header>
+            <div id="logo">
+                <a style="text-decoration: none; color: rgb(255, 255, 255); font-size: 20px;" href="/"> 
+                    <img src="/images/logo.png" alt="">
+                </a>
+                
+                <span class="hello">Tích Cực Quay Tay <br> Vận May Sẽ Đến</span>
+            </div>
+            <div class="menu">
+                <ul>
+                    <% if(user) { %>
+                    <li>Xin chào 
+                        <b style="color: rgb(247, 247, 100);"><%= user.name %> </b>
+                    </li>   
+                    <% } %> 
+                    
+
+                    <li>
+                            
+                            <a href="../game/biggame"><b style="color: #88baf0;"> Chơi Lớn </b></a>
+
+                    </li>
+                    <li>
+                            
+                            <a href="../game"><b style="color: #ff7465;"> Chơi Nhỏ </b></a>
+
+                    </li>
+
+                </ul>
+            </div>
+        </header>
+        <!-- end header  -->
+
+            <!-- content -->
+        <div class="box1">
             
-        </tr>
-        <%  }); %>
-         
-       
-        
-    </table>
+            <h1> BẢNG XẾP HẠNG  </h1>
+
+            <div class="table">
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Hạng</th>
+                            <th>Tên người chơi</th>
+                            <th>Số tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <% userss.forEach(userss => { %>  
+                            <% if ( userss  ==  user ) { %> 
+                                <tr class="active-row">
+                                    <td><%= i++ %> </td>
+                                    <td><%= userss.name %> </td>
+                                    <td><%= userss.money %>$</td>
+                                    
+                                </tr>
+                            <% } else { %> 
+                                <tr >
+                                    <td><%= i++ %> </td>
+                                    <td><%= userss.name %> </td>
+                                    <td><%= userss.money %>$</td>
+                                    
+                                </tr>
+                            <% } %> 
+                        <%  }); %>
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <!-- end content -->
+    </div>
+
 </body>
 </html>
+

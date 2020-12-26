@@ -128,7 +128,10 @@ module.exports.postBigGame =function(req,res) {
 
 
 module.exports.leaderboard = function(req, res) {
-    var user = db.get('users').value();
+    var userss = db.get('users').value();
+
+    var user = db.get('users').find({ id: req.cookies.userId }).value();
+    res.locals.user = user;
 
     function GetSortOrder(prop) {    
         return function(a, b) {    
@@ -141,10 +144,11 @@ module.exports.leaderboard = function(req, res) {
         }    
     }    
        
-    user.sort(GetSortOrder("money"));
+    userss.sort(GetSortOrder("money"));
 
     res.render('game/leaderboard', {
         title : "Bảng xếp hạng",
+        userss : userss,
         user : user,
         i : 1
     });

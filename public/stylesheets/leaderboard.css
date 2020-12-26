@@ -1,0 +1,137 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+span {
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+  position: absolute;
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 80px;
+  background: linear-gradient(to top, transparent, rgba(0,0,0,0.6));
+  
+}
+
+#logo {
+  float: left;
+  margin-top: 20px;
+  margin-left: 100px;
+}
+#logo img {
+  width: 50px;
+}
+
+header .menu {
+float: right;
+margin-top: 5px;  
+font-family: 'Bahnschrift Condensed';
+margin-right: 150px;
+}
+header ul li {
+  display: inline-block;
+  font-size: 20px;
+  color: #fff;
+  margin: 25px 40px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+header ul li a {
+  text-decoration: none;
+  
+}
+span.hello {
+  padding: 5px 25px;
+  font-weight: 1000;
+  line-height: 20px;
+  font-family: 'Bahnschrift Condensed';
+  color: #fff;
+
+}
+
+
+
+
+/* h */
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #D9AC18;
+}
+
+  .box1 {
+    margin-top: 150px ;
+    position: relative;
+  }
+  .anh img{
+    width: 100px;
+    border-radius: 50%;
+    margin-left: 47%;
+    margin-bottom: 40px;
+  }
+  h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+  .content-table {
+    border-collapse: collapse;
+    margin-top: 30px;
+    margin-left: 15%;
+    font-size: 1.2em;
+    min-width: 1200px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color: #dddddd;
+  }
+  
+  .content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .content-table th,
+  .content-table td {
+    padding: 20px 15px;
+  }
+  
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  
+  .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+  }
+  

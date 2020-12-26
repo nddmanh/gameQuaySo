@@ -177,53 +177,8 @@ span.hello {
     padding: 10px;
 }
 
-.box3 {
-    position: fixed;
-    margin-left:-5% ;
-    margin-top: 300px;
-    width: 700px;
-    height: 500 px;
-    background: #2980b9;
-    text-align: center;
-    font-family: 'Bahnschrift Condensed';
-    border: 5px solid rgb(218, 218, 218);
-    border-radius: 30px;
-    opacity: 0;
-    transition: 0.4s;
-    margin-bottom: 100px;
-    visibility: hidden;
-    z-index: 2;
-  }
-  
-.content1{
-    padding: 20px;
-    color: rgb(236, 236, 236);
-}
 
-h1.head {
-    font-size: 50px;
-    font-weight: 10000;
-    color: #f1c40f;
-    margin-bottom: 20px;
-}
 
 h3 {
     color: #f1c40f;
 }
-
-.about {
-    transform: translateY(-70px);
-    opacity: 1;
-    visibility: visible;
-}
-.nut{
-    text-decoration: none;
-    font-size: 20px;
-    color: #fff;
-    margin: 0 25px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    cursor: pointer;
-}
-p, h3 {padding: 10px;}
-  
