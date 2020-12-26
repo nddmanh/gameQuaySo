@@ -14,4 +14,4 @@
     - Thêm chức năng đăng xuất
     - Thêm trang about & leaderboard
     - Sau khi tham gia game sẽ hiện thông báo bạn có trúng số hay không & con số may mắn là bao nhiêu
-    - Trong trang bảng xếp hạng: nếu đã đăng nhập sẽ hiện thì bạn đang ở rank bao nhiêu.
+    - Trong trang bảng xếp hạng: nếu đã đăng nhập sẽ hiển thị bạn đang ở rank bao nhiêu.
