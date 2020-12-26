@@ -5,6 +5,8 @@ var validate = require('../validate/user.validate');
 
 var users = express.Router();
 
+users.get('/contact', controller.contact);
+
 users.get('/create', controller.create);
 
 users.post('/create', validate.postCreate, controller.postCreate);

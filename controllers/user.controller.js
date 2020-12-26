@@ -6,6 +6,10 @@ var shortid = require('shortid');
 var db = require('../db');
 
 
+module.exports.contact = function(req, res) {
+    res.render('users/contact', {title: "Kết nối với tôi!"});
+};
+
 module.exports.create = function(req, res) {
     res.render('users/create', {title: "Đăng ký"});
 };
