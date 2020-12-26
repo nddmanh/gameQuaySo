@@ -155,8 +155,11 @@ module.exports.leaderboard = function(req, res) {
 };
 
 module.exports.about = function(req, res) {
+    var user = db.get('users').find({ id: req.cookies.userId }).value();
+    res.locals.user = user;
 
     res.render('game/about', {
+        user : user,
         title : "About"
     });
 };

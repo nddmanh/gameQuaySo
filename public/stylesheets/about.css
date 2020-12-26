@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -5,71 +6,113 @@
     box-sizing: border-box;
 }
 
-body{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f1f1f1;
+span {
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    position: absolute;
 }
 
-.about-section{
-    background: url(/images/6T159HZ.png) no-repeat left;
-    background-size: 55%;
-    background-color: #fdfdfd;
-    overflow: hidden;
-    padding: 100px 0;
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 80px;
+    background: linear-gradient(to top, transparent, rgba(0,0,0,0.6));
+    
 }
 
-.inner-container{
-    width: 55%;
-    float: right;
-    background-color: #cf8f3b;
-    padding: 150px;
+#logo {
+    float: left;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+#logo img {
+    width: 50px;
 }
 
-.inner-container h1{
+header .menu {
+float: right;
+margin-top: 5px;  
+font-family: 'Bahnschrift Condensed';
+margin-right: 150px;
+}
+header ul li {
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    margin: 25px 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+header ul li a {
+    text-decoration: none;
+    
+}
+span.hello {
+    padding: 5px 25px;
+    font-weight: 1000;
+    line-height: 20px;
+    font-family: 'Bahnschrift Condensed';
+    color: #fff;
+
+}
+
+
+
+
+/* h */
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #C216F0;
+}
+
+.box1 {
+    margin-top: 130px ;
+    margin-left:10% ;
+    width: 1500px;
+    height: 1000 px;
+    background: #2980b9;
+    text-align: center;
+    font-family: 'Bahnschrift Condensed';
+    border: 3px solid rgb(248, 248, 248);
+    border-radius: 15px;
     margin-bottom: 30px;
-    font-size: 30px;
-    font-weight: 900;
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
 }
 
-.text{
-    font-size: 13px;
-    color: #545454;
-    line-height: 30px;
-    text-align: justify;
-    margin-bottom: 40px;
+.content1{
+    padding: 30px;
+    color: rgb(236, 236, 236);
+    text-align: center;
+    font-size: 18px;
 }
 
-.skills{
-    display: flex;
-    justify-content: space-between;
-    font-weight: 700;
-    font-size: 13px;
+h1.head {
+    font-size: 50px;
+    font-weight: 10000;
+    color: #f1c40f;
+    margin-bottom: 20px;
+    
 }
 
-@media screen and (max-width:1200px){
-    .inner-container{
-        padding: 80px;
-    }
+h3 {
+    color: #f1c40f;
 }
 
-@media screen and (max-width:1000px){
-    .about-section{
-        background-size: 100%;
-        padding: 100px 40px;
-    }
-    .inner-container{
-        width: 100%;
-    }
+
+a.game{
+    text-decoration: none;
+    color: wheat;
+    font-size: 21px;
 }
 
-@media screen and (max-width:600px){
-    .about-section{
-        padding: 0;
-    }
-    .inner-container{
-        padding: 60px;
-    }
+p {
+    padding: 10px;
 }
