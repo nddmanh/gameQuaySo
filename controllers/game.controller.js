@@ -40,7 +40,8 @@ module.exports.postGame =function(req,res) {
                 thongbao : [
                     'Chúc mừng, bạn đã đoán trúng.'
                 ],
-                random : random
+                random : random,
+                tienCuoc: tienCuoc
             });
 
         }, 4000);
@@ -57,7 +58,8 @@ module.exports.postGame =function(req,res) {
                 thongbao : [
                     'Chia buồn, bạn đã đoán sai.'
                 ],
-                random : random
+                random : random,
+                tienCuoc: tienCuoc
             });
 
         }, 4000);
@@ -101,7 +103,8 @@ module.exports.postBigGame =function(req,res) {
                 thongbao : [
                     'Chúc mừng, bạn đã đoán trúng.'
                 ],
-                random : random
+                random : random,
+                tienCuoc: tienCuoc
             });
 
         }, 4000);
@@ -118,7 +121,8 @@ module.exports.postBigGame =function(req,res) {
                 thongbao : [
                     'Chia buồn, bạn đã đoán sai.'
                 ],
-                random : random
+                random : random,
+                tienCuoc: tienCuoc
             });
 
         }, 4000);

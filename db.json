@@ -5,14 +5,21 @@
       "username": "manhnd",
       "password": "81dc9bdb52d04dc20036dbd8313ed055",
       "id": "igt9N6Ycx",
-      "money": 757870
+      "money": 767036
     },
     {
       "name": "Nam",
       "username": "namm",
       "password": "81dc9bdb52d04dc20036dbd8313ed055",
       "id": "xP2VnmojT",
-      "money": 12700
+      "money": 12980
+    },
+    {
+      "name": "Nhi",
+      "username": "ihn",
+      "password": "4a21c331d71ed79af44193d19667b924",
+      "id": "cszjO4FaS",
+      "money": 10088
     },
     {
       "name": "Chiến",
@@ -33,7 +40,7 @@
       "username": "hung",
       "password": "81dc9bdb52d04dc20036dbd8313ed055",
       "id": "Fa7wL4XU3",
-      "money": 8880
+      "money": 8799
     }
   ]
 }

@@ -7,92 +7,115 @@
         Chơi Nhỏ
     </title>
     <link href="/stylesheets/game.css" rel="stylesheet">
+	<script type="text/javascript" src="/javascripts/game.js"></script>
+
 
 </head>
 <body>
 
-    <header>
-        <div id="logo">
-            <a style="text-decoration: none; color: rgb(255, 255, 255); font-size: 20px;" href="/"> 
-                <img src="/images/logo.png" alt="">
-            </a>
-            
-            <span class="hello">Tích Cực Quay Tay <br> Vận May Sẽ Đến</span>
-        </div>
-        <div class="menu">
-            <ul>
-                <li>Xin chào 
-                <% if(user) { %>
-                    <b style="color: rgb(247, 247, 100);"><%= user.name %> </b>
-                <% } %> 
-                </li>
-                <li>Bạn đang có : 
-                    <% if(user) { %>
-                        <b style="color: rgb(247, 247, 100);"><%= user.money %> </b>
-                    <% } %> 
-                    $
-
-                </li>
-                <li>
-                        Chuyển qua: 
-                        <a href="../game/biggame"><b style="color: rgb(247, 247, 100);"> Chơi Lớn </b></a>
-
-                </li>
-                <li>
-                        <a style="color: #02D9AE;" href="../game/leaderboard">BXH</a> 
-
-                </li>
-                <li>
-                        <a style="color:#FFFF00;" href="../auth/logout">Đăng xuất</a> 
-
-                </li>
-            </ul>
-        </div>
-    </header>
-
-    <form action="/game" method="POST">
-        <div class="content">
-                    <h3 style="margin-bottom: 50px; text-align: center;" >Bạn Đang Chơi Nhỏ </h3>
+    <div class="box_content">
+        <header>
+            <div id="logo">
+                <a style="text-decoration: none; color: rgb(255, 255, 255); font-size: 20px;" href="/"> 
+                    <img src="/images/logo.png" alt="">
+                </a>
                 
-                    <p class="text1">
-                        Chọn 1 con số may mắn (trong khoảng từ 1 tới 5):
-                        <input class="input" type="number" name="soCuoc" min="1" max="5" required autofocus>
-                    </p>
-                    <p class="text1">
-                        Nhập số tiền bạn muốn đặt cược:
-                        <input class="input" type="number" name="tienCuoc" min="1" 
-                        max= <%= user.money %> required autofocus>
-                    </p>
-                    
-        </div>
-
-        <div id="mainbox" class="mainbox">
-            
-            <div id="box" class="box">
-                <div class="box1">
-                    <span class="span1"></span>
-                    <span class="span2"></span>
-                    <span class="span3"></span>
-                    <span class="span4"></span>
-                </div>
-                <div class="box2">
-                    <span class="span1"></span>
-                    <span class="span2"></span>
-                    <span class="span3"></span>
-                    <span class="span4"></span>
-                </div>
+                <span class="hello">Tích Cực Quay Tay <br> Vận May Sẽ Đến</span>
             </div>
-            <button class="spin" type="submit" onclick="myfunction()">Quay</button>
-        </div>
-    </form>
+            <div class="menu">
+                <ul>
+                    <li>Xin chào 
+                    <% if(user) { %>
+                        <b style="color: rgb(247, 247, 100);"><%= user.name %> </b>
+                    <% } %> 
+                    </li>
+                    <li>Bạn đang có : 
+                        <% if(user) { %>
+                            <b style="color: rgb(247, 247, 100);"><%= user.money %> </b>
+                        <% } %> 
+                        $
+    
+                    </li>
+                    <li>
+                            Chuyển qua: 
+                            <a href="../game/biggame"><b style="color: rgb(247, 247, 100);"> Chơi Lớn </b></a>
+    
+                    </li>
+                    <li>
+                            <a style="color: #02D9AE;" href="../game/leaderboard">BXH</a> 
+    
+                    </li>
+                    <li>
+                            <a style="color:#FFFF00;" href="../auth/logout">Đăng xuất</a> 
+    
+                    </li>
+                </ul>
+            </div>
+        </header>
+    
+        <form action="/game" method="POST">
+            <div class="content">
+                        <h3 style="margin-bottom: 50px; text-align: center;" >Bạn Đang Chơi Nhỏ </h3>
+                    
+                        <p class="text1">
+                            Chọn 1 con số may mắn (trong khoảng từ 1 tới 5):
+                            <input class="input" type="number" name="soCuoc" min="1" max="5" required autofocus>
+                        </p>
+                        <p class="text1">
+                            Nhập số tiền bạn muốn đặt cược:
+                            <input class="input" type="number" name="tienCuoc" min="1" 
+                            max= <%= user.money %> required autofocus>
+                        </p>
+                        
+            </div>
+    
+            <div id="mainbox" class="mainbox">
+                
+                <div id="box" class="box">
+                    <div class="box1">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </div>
+                    <div class="box2">
+                        <span class="span1"></span>
+                        <span class="span2"></span>
+                        <span class="span3"></span>
+                        <span class="span4"></span>
+                    </div>
+                </div>
+                <button class="spin" type="submit" onclick="myfunction()">Quay</button>
+            </div>
+        </form>
+    </div>
+    
 
     <% var thongbao %> 
         <% var random %> 
         <% if ( thongbao ) {%> 
-            <script>
-                alert("<%= thongbao %> \nCon số may mắn là <%= random %> ");
-            </script>
-    <% }%> 
+
+            <% if ( thongbao == "Chúc mừng, bạn đã đoán trúng.") {%> 
+
+                <div class="box_firework">
+                    <canvas id="canvas"></canvas>
+                    <div class="text">
+                        <span> <%= thongbao %> <br> Con số may mắn là <%= random %> <br> Bạn được cộng <%= (tienCuoc * 3 ) %> $  </span>
+                    </div>
+                </div>
+
+            <% } else if ( thongbao == "Chia buồn, bạn đã đoán sai.") {%> 
+
+                <div class="box_rainy">
+                    <div class="rain"></div>
+                    <div class="lightining"></div>
+                    <div class="text" style="color: yellow;">
+                        <span> <%= thongbao %> <br> Con số may mắn là <%= random %> <br> Bạn bị trừ <%= tienCuoc %> $ </span>
+                    </div>
+                </div>
+
+            <% }%> 
+        <% }%> 
 <script>
     function myfunction(){
         var x = 1024;
