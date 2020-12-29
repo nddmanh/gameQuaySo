@@ -3,7 +3,9 @@
 * cách mở (sử dụng VScode):
   - download file về máy
   - trong thư mục chọn Open with code
-  - mở phần Terminal chạy bằng lệnh "npm start"
+  - mở phần Terminal:
+    + tải các node modules bằng lệnh: "npm i"
+    + chạy bằng lệnh "npm start"
   - Dùng trình duyệt truy cập địa chỉ: localhost:3000
   
  * một số cải thiện:
