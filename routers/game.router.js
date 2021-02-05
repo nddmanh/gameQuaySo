@@ -10,10 +10,9 @@ game.get('/', authMiddleware.requireAuth, controller.game);
 
 game.post('/', controller.postGame);
 
-game.get('/biggame', authMiddleware.requireAuth, controller.BigGame);
+// game.get('/biggame', authMiddleware.requireAuth, controller.BigGame);
 
-
-game.post('/biggame', controller.postBigGame);
+// game.post('/biggame', controller.postBigGame);
 
 game.get('/leaderboard', controller.leaderboard);
 
