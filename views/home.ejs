@@ -7,6 +7,8 @@
         <%= title %> 
     </title>
     <link href="/stylesheets/home.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -21,7 +23,6 @@
                     <ul>
                             <li><button><a style="color: rgb(51, 51, 51);" href="/"><b>Home </b></a></button>  </li>
                             <li ><a href="./game/about">About </a> </li>
-                            <li><a href="./users/contact">Contact</a> </li>
                             <li><a href="./game/leaderboard">Leaderboard</a> </li>
                             <li>
                         <% if(!user) {%> 
@@ -61,9 +62,7 @@
                     <p>Đây là tựa game bạn có thể kiếm tiền bằng cách thử độ may mắn của mình </p>
                     <p>Khi tạo tài khoản, bạn được tặng ngay <b>10 000$</b> </p>
                     <h3>Luật chơi</h3>
-                    <h4> Có 2 kiểu chơi để bạn tham gia như sau:</h4>
-                    <p><b><a class="game" href="/game/biggame">Chơi lớn: </a> </b> Bạn đặt cược 1 con số từ 0 đến 99, sau đó nhập số tiền bạn muốn cược ( không được lớn hơn số tiền bạn có) sau đó nhấn nút quay. <br> Nếu con số may mắn quay ra đúng với con số bạn cược, bạn sẽ nhận được x70 lần số tiền cược</p>
-                    <p><b><a class="game" href="/game">Chơi nhỏ: </a> </b> Bạn đặt cược 1 con số từ 1 đến 5, sau đó nhập số tiền bạn muốn cược ( không được lớn hơn số tiền bạn có) sau đó nhấn nút quay. <br> Nếu con số may mắn quay ra đúng với con số bạn cược, bạn sẽ nhận được x3 lần số tiền cược</p>
+                    <p>Bạn đặt cược 1 con số từ 1 đến 5, sau đó nhập số tiền bạn muốn cược ( không được lớn hơn số tiền bạn có) sau đó nhấn nút quay. <br> Nếu con số may mắn quay ra đúng với con số bạn cược, bạn sẽ nhận được x3 lần số tiền cược</p>
                     <h3>Cách nạp tiền</h3>
                     <p>Khi hết tiền, bạn có thể nạp tiền bằng cách chuyển khoản vào số tài khoản: <b>3406200009532</b> với quy đổi <b>1$ = 25 000vnđ</b></p>
                     <h3>Cách rút tiền</h3>

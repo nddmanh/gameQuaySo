@@ -1,3 +1,9 @@
+@media (max-width: 1023 px) {
+    header {
+        display: none;
+    }
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -18,7 +24,7 @@ body {
     position: relative;
     width: 500px;
     height: 500px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 /*  */
 .mainbox.animate:after {
@@ -103,9 +109,9 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 25px 80px;
+    padding: 15px 30px;
     background: linear-gradient(to top, transparent, rgba(0,0,0,0.6));
-    
+
 }
 
 #logo {
@@ -118,16 +124,15 @@ header {
 }
 
 header .menu {
-  float: right;
-  margin-top: 5px;  
-  font-family: 'Bahnschrift Condensed';
-  margin-right: 150px;
+  margin-top: 0px;  
+  font-family: 'Signika';
+  text-align: center;
 }
 header ul li {
     display: inline-block;
     font-size: 20px;
     color: #fff;
-    margin: 25px 40px;
+    margin: 20px 30px;
     font-weight: 500;
     letter-spacing: 1px;
 }
@@ -174,7 +179,7 @@ span.hello {
     margin: 0 5px;
   }
 .input {
-    padding: 10px;
+    padding: 5px;
 }
 
 

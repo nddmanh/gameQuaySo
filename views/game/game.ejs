@@ -6,24 +6,23 @@
     <title> 
         Chơi Nhỏ
     </title>
-    <link href="/stylesheets/game.css" rel="stylesheet">
+    <link href="/stylesheets/game.css" rel="stylesheet" >
 	<script type="text/javascript" src="/javascripts/game.js"></script>
-
-
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script> 
+    <![endif]-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
 
     <div class="box_content">
         <header>
-            <div id="logo">
-                <a style="text-decoration: none; color: rgb(255, 255, 255); font-size: 20px;" href="/"> 
-                    <img src="/images/logo.png" alt="">
-                </a>
-                
-                <span class="hello">Tích Cực Quay Tay <br> Vận May Sẽ Đến</span>
-            </div>
+
             <div class="menu">
                 <ul>
+                    
                     <li>Xin chào 
                     <% if(user) { %>
                         <b style="color: rgb(247, 247, 100);"><%= user.name %> </b>
@@ -36,11 +35,11 @@
                         $
     
                     </li>
-                    <li>
+                    <!-- <li>
                             Chuyển qua: 
                             <a href="../game/biggame"><b style="color: rgb(247, 247, 100);"> Chơi Lớn </b></a>
     
-                    </li>
+                    </li> -->
                     <li>
                             <a style="color: #02D9AE;" href="../game/leaderboard">BXH</a> 
     
@@ -55,7 +54,6 @@
     
         <form action="/game" method="POST">
             <div class="content">
-                        <h3 style="margin-bottom: 50px; text-align: center;" >Bạn Đang Chơi Nhỏ </h3>
                     
                         <p class="text1">
                             Chọn 1 con số may mắn (trong khoảng từ 1 tới 5):

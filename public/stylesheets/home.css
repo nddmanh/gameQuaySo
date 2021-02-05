@@ -40,7 +40,7 @@ body {
       width: 530px;
   }
   to {
-      left: 50%;
+      left: 60%;
       width: 0px;
   }
 }
@@ -51,7 +51,7 @@ body {
   color: white;
   position: absolute;
   top: 250px;
-  left: 100px;
+  left: 200px;
   overflow: hidden;
 
 }
@@ -59,10 +59,9 @@ body {
   position: relative;
   left: -100%;
   animation: anim3 2s forwards 3s;
-  font-size: 7em;
-  font-weight: 1000;
-  line-height: 180px;
-  font-family: 'Bahnschrift Condensed';
+  font-size: 5em;
+
+  font-family: 'Signika';
 
 }
 @keyframes anim3 {

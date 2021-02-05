@@ -19,7 +19,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 25px 80px;
+    padding: 15px 100px;
     background: linear-gradient(to top, transparent, rgba(0,0,0,0.6));
     
 }
@@ -27,23 +27,23 @@ header {
 #logo {
     float: left;
     margin-top: 20px;
-    margin-left: 100px;
+    margin-left: 200px;
 }
 #logo img {
     width: 50px;
 }
 
 header .menu {
-float: right;
-margin-top: 5px;  
-font-family: 'Bahnschrift Condensed';
-margin-right: 150px;
+    float: right;
+    margin-top: 5px;  
+    font-family: 'Bahnschrift Condensed';
+    margin-right: 350px;
 }
 header ul li {
     display: inline-block;
     font-size: 20px;
     color: #fff;
-    margin: 25px 40px;
+    margin: 15px 10px;
     font-weight: 500;
     letter-spacing: 1px;
 }
@@ -61,8 +61,6 @@ span.hello {
 }
 
 
-
-
 /* h */
 
 .bg {
@@ -74,8 +72,8 @@ span.hello {
 
 .box1 {
     margin-top: 130px ;
-    margin-left:10% ;
-    width: 1500px;
+    margin-left:15% ;
+    width: 1100px;
     height: 1000 px;
     background: #2980b9;
     text-align: center;
@@ -88,7 +86,7 @@ span.hello {
 }
 
 .content1{
-    padding: 30px;
+    padding: 10px;
     color: rgb(236, 236, 236);
     text-align: center;
     font-size: 18px;
