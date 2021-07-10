@@ -1,4 +1,5 @@
 # gameQuaySo
+Demo: https://bigwheel.techdude.site
 
 * cách mở (sử dụng VScode):
   - download file về máy
