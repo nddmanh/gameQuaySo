@@ -9,7 +9,7 @@ var userRoute = require('./routers/user.router');
 var authRoute = require('./routers/auth.router');
 var gameRoute = require('./routers/game.router');
 
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 var app = express();
 app.use(express.json()) // for parsing application/json
