@@ -1,5 +1,5 @@
 # gameQuaySo
-Demo: https://bigwheel.techdude.site
+Demo: https://game-quay-so.herokuapp.com
 
 * cách mở (sử dụng VScode):
   - download file về máy
