@@ -16,7 +16,6 @@
     
 </head>
 <body>
-
     <div class="box_content">
         <header>
 
@@ -41,11 +40,11 @@
     
                     </li> -->
                     <li>
-                            <a style="color: #02D9AE;" href="../game/leaderboard">BXH</a> 
+                        <a style="color: #02D9AE;" href="../game/leaderboard">BXH</a> 
     
                     </li>
                     <li>
-                            <a style="color:#FFFF00;" href="../auth/logout">Đăng xuất</a> 
+                        <a style="color:#FFFF00;" href="../auth/logout">Đăng xuất</a> 
     
                     </li>
                 </ul>
@@ -54,21 +53,18 @@
     
         <form action="/game" method="POST">
             <div class="content">
-                    
-                        <p class="text1">
-                            Chọn 1 con số may mắn (trong khoảng từ 1 tới 5):
-                            <input class="input" type="number" name="soCuoc" min="1" max="5" required autofocus>
-                        </p>
-                        <p class="text1">
-                            Nhập số tiền bạn muốn đặt cược:
-                            <input class="input" type="number" name="tienCuoc" min="1" 
-                            max= <%= user.money %> required autofocus>
-                        </p>
-                        
+                <p class="text1">
+                    Chọn 1 con số may mắn (trong khoảng từ 1 tới 5):
+                    <input class="input" type="number" name="soCuoc" min="1" max="5" required autofocus>
+                </p>
+                <p class="text1">
+                    Nhập số tiền bạn muốn đặt cược:
+                    <input class="input" type="number" name="tienCuoc" min="1" 
+                    max= <%= user.money %> required autofocus>
+                </p>
             </div>
     
             <div id="mainbox" class="mainbox">
-                
                 <div id="box" class="box">
                     <div class="box1">
                         <span class="span1"></span>
@@ -94,16 +90,13 @@
         <% if ( thongbao ) {%> 
 
             <% if ( thongbao == "Chúc mừng, bạn đã đoán trúng.") {%> 
-
                 <div class="box_firework">
                     <canvas id="canvas"></canvas>
                     <div class="text">
                         <span> <%= thongbao %> <br> Con số may mắn là <%= random %> <br> Bạn được cộng <%= (tienCuoc * 3 ) %> $  </span>
                     </div>
                 </div>
-
             <% } else if ( thongbao == "Chia buồn, bạn đã đoán sai.") {%> 
-
                 <div class="box_rainy">
                     <div class="rain"></div>
                     <div class="lightining"></div>
@@ -111,14 +104,12 @@
                         <span> <%= thongbao %> <br> Con số may mắn là <%= random %> <br> Bạn bị trừ <%= tienCuoc %> $ </span>
                     </div>
                 </div>
-
-            <% }%> 
+            <% } %> 
         <% }%> 
 <script>
     function myfunction(){
         var x = 1024;
         var y = 9999;
-
         var deg = Math.floor(Math.random() * (x-y)) + y;
 
         document.getElementById('box').style.transform = "rotate(" + deg + "deg)";

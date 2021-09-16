@@ -1,6 +1,3 @@
-var db = require('../db');
-
-
 module.exports.postCreate = function(req, res, next ){
     var errors = [];
 

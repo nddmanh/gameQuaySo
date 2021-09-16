@@ -3,7 +3,6 @@ var express = require('express');
 var controller = require('../controllers/game.controller');
 var authMiddleware = require('../middleware/auth.middleware');
 
-
 var game = express.Router();
 
 game.get('/', authMiddleware.requireAuth, controller.game);

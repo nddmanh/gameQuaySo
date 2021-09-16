@@ -23,8 +23,6 @@
                 <input type="text" name="username" id="username"  class="form-control" placeholder="User Name" required autofocus>  
             </div>
 
-                    
-
             <div class="textbox">
                 <i class="fas fa-lock"></i>
                 <input type="password" name="password" placeholder="Password" required autofocus>
@@ -34,10 +32,9 @@
             
             <% var errors  %> 
             <% if ( errors ) {%> 
-            <div class="alert alert-danger" role="alert">
-                <span style="color: red;"> <%= errors %> </span>
-            </div>
-
+                <div class="alert alert-danger" role="alert">
+                    <span style="color: red;"> <%= errors %> </span>
+                </div>
             <% }%> 
         
         </form>

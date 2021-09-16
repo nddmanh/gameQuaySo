@@ -13,45 +13,37 @@
 </head>
 <body>
     <div id="main">
-
             <header>
                 <div class="nutLogo" id="logo">
                     <img style="cursor: pointer;" src="/images/logo.png" alt="">
-
                 </div>
                 <div class="menu">
                     <ul>
-                            <li><button><a style="color: rgb(51, 51, 51);" href="/"><b>Home </b></a></button>  </li>
-                            <li ><a href="./game/about">About </a> </li>
-                            <li><a href="./game/leaderboard">Leaderboard</a> </li>
-                            <li>
+                        <li><button><a style="color: rgb(51, 51, 51);" href="/"><b>Home </b></a></button>  </li>
+                        <li ><a href="./game/about">About </a> </li>
+                        <li><a href="./game/leaderboard">Leaderboard</a> </li>
+                        <li>
                         <% if(!user) {%> 
                             <a href="../auth/login">Sign In</a> 
                         <% } else { %> 
-                            
-                                <span>Hello <b style="color: rgb(247, 247, 100);"><%= user.name %> </b> </span>
-                                <a style="color: #FFC0CB;" href="../auth/logout">Log out</a> 
-                            
-                            
+                            <span>Hello <b style="color: rgb(247, 247, 100);"><%= user.name %> </b> </span>
+                            <a style="color: #FFC0CB;" href="../auth/logout">Log out</a> 
                         <% } %> 
-                            </li>
+                        </li>
                     </ul>
                 </div>
             </header>
 
             <div id="box1"></div>
-
             <div id="box2">
                 <div id="text">
                     Tích Cực Quay Tay <br>Vận May Sẽ Đến
                     <div class="content">
-                        
                         <div class="btn-group">
                             <a href="/game" class="color1">Chơi Ngay</a>
                         </div>
                     </div>  
                 </div>
-                
             </div>
 
             <div class="box3" >
@@ -69,28 +61,20 @@
                     <p>Khi bạn muốn rửa tay gác kiếm, quay đầu là bờ, thì bạn có thể rút tiền từ tài khoản bằng cách liên hệ với mình qua phần <b>Contact</b> <br> với quy đổi <b>1$ = 10 000vnđ</b> </p>
                     <p><b>Lưu ý: </b>Bạn có thể rút tiền khi tài khoản lớn hơn <b>100 000 $</b> </p>
                 </div>
-                
             </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded',function(){
-    
-    var nut = document.querySelector('.nut'),
-        nutLogo = document.querySelector('.nutLogo'),
-        box3 = document.querySelector('.box3');
+        <script>
+            document.addEventListener('DOMContentLoaded',function(){
+                var nut = document.querySelector('.nut'),
+                    nutLogo = document.querySelector('.nutLogo'),
+                    box3 = document.querySelector('.box3');
 
-    // khi click vao nut 
-
-    nutLogo.onclick = function(){
-        box3.classList.toggle('about');
-
-    }
-
-}, false)
-
-</script>
-        
-
+                // khi click vao nut 
+                nutLogo.onclick = function(){
+                    box3.classList.toggle('about');
+                }
+            }, false)
+        </script>
     </div>
 </body>
 </html>

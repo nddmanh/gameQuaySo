@@ -11,12 +11,10 @@
 <div class="login-box">
     <h1>Thông tin Đăng nhập</h1>
     <form action="/auth/login" method="POST" >
-
         <div class="textbox">
             <i class="fas fa-envelope-open-text"></i>
             <input type="text" name="username" id="username"  class="form-control" placeholder="User Name" required autofocus>  
         </div>
-
 
         <div class="textbox">
             <i class="fas fa-lock"></i>
@@ -30,9 +28,7 @@
           <div class="alert alert-danger" role="alert">
             <span style="color: red;"> <%= errors %> </span>
           </div>
-
         <% }%> 
-    
     </form>
 
     <div class="btn regis"> <a href="../users/create">Bạn chưa có tài khoản? <br> Đăng ký ngay! </a></div>

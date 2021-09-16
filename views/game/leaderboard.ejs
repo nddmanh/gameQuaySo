@@ -14,27 +14,21 @@
                 <a style="text-decoration: none; color: rgb(255, 255, 255); font-size: 20px;" href="/"> 
                     <img src="/images/logo.png" alt="">
                 </a>
-                
             </div>
             <div class="menu">
                 <ul>
                     <% if(user) { %>
-                    <li>Xin chào 
-                        <b style="color: rgb(247, 247, 100);"><%= user.name %> </b>
-                    </li>   
+                        <li>Xin chào 
+                            <b style="color: rgb(247, 247, 100);"><%= user.name %> </b>
+                        </li>   
                     <% } %> 
-                    
 
                     <li> 
-                            <a href="../game/about"><b style="color: #88f099;"> Luật chơi </b></a>
-
+                        <a href="../game/about"><b style="color: #88f099;"> Luật chơi </b></a>
                     </li>
-
                     <li>
-                            <a href="../game"><b style="color: #ff7465;"> Chơi Game </b></a>
-
+                        <a href="../game"><b style="color: #ff7465;"> Chơi Game </b></a>
                     </li>
-
                 </ul>
             </div>
         </header>
@@ -55,29 +49,24 @@
                         </tr>
                     </thead>
                     <tbody>
-
                         <% userss.forEach(userss => { %>  
                             <% if ( userss  ==  user ) { %> 
                                 <tr class="active-row">
                                     <td><%= i++ %> </td>
                                     <td><%= userss.name %> </td>
                                     <td><%= userss.money %>$</td>
-                                    
                                 </tr>
                             <% } else { %> 
                                 <tr >
                                     <td><%= i++ %> </td>
                                     <td><%= userss.name %> </td>
                                     <td><%= userss.money %>$</td>
-                                    
                                 </tr>
                             <% } %> 
                         <%  }); %>
-
                     </tbody>
                 </table>
             </div>
-
         </div>
         <!-- end content -->
     </div>
